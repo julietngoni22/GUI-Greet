@@ -56,19 +56,21 @@ public class Greet  extends JFrame{
     public Greet(){
         //configure the GUI
         setLayout(new BorderLayout());
-        setTitle("Greeting!!!!");
+        setTitle("Dashboard");
         setBackground(Color.yellow);
         setAlwaysOnTop(true);
         setSize(750, 750);
         setBackground(Color.yellow);
-        
+        JPanel pa = new JPanel();
+        pa.setBackground(Color.red);
+        setBounds(50, 50,500, 550);
         namePanel = new JPanel(new FlowLayout());
         surnamPanel = new JPanel(new FlowLayout());
         
         nameAsurnamePanel = new JPanel(new GridLayout(2,2));
         
         greetingAreaPanel = new JPanel( new FlowLayout());
-        greetingAreaPanel.setBorder(new TitledBorder(new LineBorder(Color.green, 1), "Greetings"));
+        greetingAreaPanel.setBorder(new TitledBorder(new LineBorder(Color.blue, 0), "Welcome"));
         
         btnPanel = new JPanel(new FlowLayout());
         mainPanel = new JPanel(new BorderLayout());
@@ -76,7 +78,7 @@ public class Greet  extends JFrame{
         headingpn1.setBorder(new BevelBorder(BevelBorder.RAISED));
         
         //create the labels
-        headingLabel = new JLabel("GreetingsApp");
+        headingLabel = new JLabel("About");
         nameLabel = new JLabel("Name: ");
         surnameLabel = new JLabel("Surname: ");
      
@@ -86,13 +88,14 @@ public class Greet  extends JFrame{
         surnameTextField =new JTextField(20);
        
         //CREATE THE AREA
-        greetingsTextArea = new JTextArea(40,50);
+        greetingsTextArea = new JTextArea(10,20);
         greetingsTextArea.setEditable(false);
-        greetingsTextArea.setText("Hello\tJuliet\tNgoni");
+        greetingsTextArea.setText("More about\tSecureAll \tPTY LTD");
+         greetingsTextArea.setText("Hello\tJuliet\tNgoni");
         //CREATE THE BUTTONS
-        greetButton = new JButton("Greet");
-        clearButton = new JButton("Clear");
-        exitButton = new JButton("Exit");
+        greetButton = new JButton("Log in");
+        clearButton = new JButton("Sign up");
+        exitButton = new JButton("Sign out");
         
         //add name label textfield to the name panel
         namePanel.add(nameLabel);
